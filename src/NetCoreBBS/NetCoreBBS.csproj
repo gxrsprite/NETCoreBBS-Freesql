@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>NetCoreBBS</AssemblyName>
+    <PackageId>NetCoreBBS</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="wwwroot\**\*;Views\**\*;Areas\**\*;nlog.config">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FreeSql.DbContext" Version="3.2.661" />
+    <PackageReference Include="FreeSql.Provider.SqlServer" Version="3.2.661" />
+    <PackageReference Include="IGeekFan.AspNetCore.Identity.FreeSql" Version="0.0.504" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.5" />
+    <PackageReference Include="BuildBundlerMinifier" Version="3.2.449" PrivateAssets="All" />
+    <PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ApplicationCore\ApplicationCore.csproj" />
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\images\avatar\" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties bower_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>
